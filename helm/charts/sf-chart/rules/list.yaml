@@ -1,0 +1,651 @@
+###### Lists ####################
+- list: shell_binaries
+  items: [ash, bash, csh, ksh, sh, tcsh, zsh, dash]
+  
+- list: shell_mgmt_binaries
+  items: [add-shell, remove-shell]
+  
+- list: script_interpreters
+  items: [ruby, python, python2.7, python2, python3, python3.5, java, perl, node, js24]
+
+- list: shell_interpreters
+  items: [awk, gawk]
+  
+- list: coreutils_binaries
+  items: [
+    truncate, sha1sum, numfmt, fmt, fold, uniq, cut, who,
+    groups, csplit, sort, expand, printf, printenv, unlink, tee, chcon, stat,
+    basename, split, nice, "yes", whoami, sha224sum, hostid, users, stdbuf,
+    base64, unexpand, cksum, od, paste, nproc, pathchk, sha256sum, wc, test,
+    comm, arch, du, factor, sha512sum, md5sum, tr, runcon, env, dirname,
+    tsort, join, shuf, install, logname, pinky, nohup, expr, pr, tty, timeout,
+    tail, "[", seq, sha384sum, nl, head, id, mkfifo, sum, dircolors, ptx, shred,
+    tac, link, chroot, vdir, chown, touch, ls, dd, uname, "true", pwd, date,
+    chgrp, chmod, mktemp, cat, mknod, sync, ln, "false", rm, mv, cp, echo,
+    readlink, sleep, stty, mkdir, df, dir, rmdir
+    ]
+    
+- list: coreutils_mod_binaries
+  items: [
+    truncate, who, groups, csplit, expand, printenv, unlink, chcon, 
+    split, whoami, users, stdbuf, unexpand, paste, runcon, env, 
+    install, logname, pinky, nohup, tty, id, mkfifo, shred,
+    link, chroot, chown, touch, dd, chgrp, chmod, mktemp, mknod, 
+    ln, rm, mv, cp, rmdir
+    ]
+    
+- list: login_binaries
+  items: [
+    login, systemd, '"(systemd)"', systemd-logind, su,
+    nologin, faillog, lastlog, newgrp, sg
+    ]
+  
+- list: repositories
+  items: [git, svn]
+
+ - list: modify_passwd_binaries
+  items: [
+    chpasswd, chgpasswd, passwd
+    ]
+ 
+- list: verify_passwd_binaries
+  items: [ unix_chkpwd ] 
+ 
+- list: create_user_binaries
+  items: [ useradd, newusers ] 
+ 
+- list: delete_user_binaries
+  items: [ userdel ] 
+ 
+- list: modify_user_binaries
+  items: [ usermod ] 
+
+- list: create_grp_binaries
+  items: [ groupadd, newusers ]  
+
+- list: delete_group_binaries
+  items: [ groupdel ] 
+  
+- list: modify_grp_binaries
+  items: [ groupmod ] 
+
+- list: user_util_binaries
+  items: [
+    shadowconfig, grpck, pwunconv, grpconv, pwck,
+    vipw, pwconv, cppw, 
+    grpunconv, chage, chsh,
+    gpasswd, chfn, expiry, vigr, cpgr
+    ]
+
+- list: k8s_binaries
+  items: [hyperkube, skydns, kube2sky, exechealthz, weave-net, loopback, bridge, openshift-sdn, openshift]
+
+- list: lxd_binaries
+  items: [lxd, lxcfs]
+
+- list: http_server_binaries
+  items: [nginx, httpd, httpd-foregroun, lighttpd, apache, apache2, node]
+
+- list: db_server_binaries
+  items: [mysqld, postgres, sqlplus]
+
+- list: mysql_mgmt_binaries
+  items: [mysql_install_d, mysql_ssl_rsa_s]
+
+- list: postgres_mgmt_binaries
+  items: [pg_dumpall, pg_ctl, pg_lsclusters, pg_ctlcluster]
+
+- list: db_mgmt_binaries
+  items: [mysql_mgmt_binaries, postgres_mgmt_binaries]
+
+- list: nosql_server_binaries
+  items: [couchdb, memcached, redis-server, rabbitmq-server, mongod]
+
+- list: gitlab_binaries
+  items: [gitlab-shell, gitlab-mon, gitlab-runner-b, git]
+
+- list: rpm_binaries
+  items: [dnf, rpm, rpmkey, yum, '"75-system-updat"', rhsmcertd-worke, subscription-ma,
+          repoquery, rpmkeys, rpmq, yum-cron, yum-config-mana, yum-debug-dump,
+          abrt-action-sav, rpmdb_stat, microdnf, rhn_check, yumdb]
+
+- list: deb_binaries
+  items: [dpkg, dpkg-preconfigu, dpkg-reconfigur, dpkg-divert, apt, apt-get, aptitude,
+    frontend, preinst, add-apt-reposit, apt-auto-remova, apt-key,
+    apt-listchanges, unattended-upgr, apt-add-reposit
+    ]
+
+- list: package_mgmt_binaries
+  items: [rpm_binaries, deb_binaries, update-alternat, gem, pip, pip3, sane-utils.post, alternatives, chef-client, apk, snapd]
+
+- list: ssl_mgmt_binaries
+  items: [ca-certificates]
+ 
+- list: dhcp_binaries
+  items: [dhclient, dhclient-script, 11-dhclient]
+ 
+- list: mail_binaries
+  items: [
+    sendmail, sendmail-msp, postfix, procmail, exim4,
+    pickup, showq, mailq, dovecot, imap-login, imap,
+    mailmng-core, pop3-login, dovecot-lda, pop3
+    ]
+ 
+- list: vpn_binaries
+  items: [openvpn]
+
+- list: sys_password_files
+  items: [/etc/shadow, /etc/passwd]
+
+- list: sensitive_file_names
+  items: [/etc/sudoers, /etc/pam.conf, /etc/pam.conf, /etc/security/pwquality.conf]
+  
+- list: cron_binaries
+  items: [anacron, cron, crond, crontab]
+ 
+- list: system_users
+  items: [bin, daemon, games, lp, mail, nobody, sshd, sync, uucp, www-data]
+  
+- list: system_directories
+  items: [/boot, /lib, /lib64, /usr/lib, /usr/local/lib, /usr/local/sbin, /usr/local/bin, /root/.ssh, /etc]
+
+ - list: init_directories
+   items: [/etc/init.d]
+
+- list: history_files 
+  items: [".bash_history", ".ash_history"]
+  
+- list: network_config_files
+  items: [/etc/resolv.conf]
+
+- list: read_sensitive_file_binaries
+  items: [
+    iptables, ps, lsb_release, check-new-relea, dumpe2fs, accounts-daemon, sshd,
+    vsftpd, systemd, mysql_install_d, psql, screen, debconf-show, sa-update,
+    pam-auth-update, pam-config, spamd, polkit-agent-he, lsattr, file, sosreport,
+    scxcimservera, adclient, rtvscand, cockpit-session, userhelper, ossec-syscheckd
+    ]
+    
+- list: downloader_binaries
+  items: [wget, curl]
+  
+- list: remote_copy_binaries
+  items: [scp, rsync, telnet, ssh, ftp, rcp, sftp]
+
+- list: known_root_files
+  items: [/root/.monit.state, /root/.auth_tokens, /root/.bash_history, /root/.ash_history, /root/.aws/credentials,
+          /root/.viminfo.tmp, /root/.lesshst, /root/.bzr.log, /root/.gitconfig.lock, /root/.babel.json, 
+          /root/.localstack, /root/.node_repl_history, /root/.mongorc.js, /root/.dbshell, /root/.augeas/history, 
+          /root/.rnd, /root/.wget-hsts, /health, /exec.fifo]
+
+- list: known_root_directories
+  items: [/root/.oracle_jre_usage, /root/.subversion, /root/.nami]
+
+- list: profile_files
+  items: [".bashrc", ".bash_profile", ".profile"]
+
+- list: ld_preload_files
+  items: ["/etc/ld.so.preload"]
+
+- list: scheduler_files
+  items: [/etc/crontab] 
+
+- list: scheduler_directories
+  items: ["/etc/cron.d", "/etc/cron.daily", "/etc/cron.monthly", "/etc/cron.hourly", "/etc/cron.weekly", 
+          "/usr/lib/cron/tabs", "/var/cron/tabs", "/var/spool/cron/crontabs", "/var/spool/cron"] 
+
+- list: protected_shell_spawning_binaries
+  items: [
+    http_server_binaries, db_server_binaries, nosql_server_binaries, mail_binaries,
+    fluentd, flanneld, splunkd, consul, smbd, runsv, PM2
+    ]
+    
+- list: allowed_dev_files
+  items: [
+    /dev/null, /dev/stdin, /dev/stdout, /dev/stderr,
+    /dev/random, /dev/urandom, /dev/console, /dev/kmsg
+    ]
+    
+- list: mesos_shell_binaries
+  items: [mesos-docker-ex, mesos-slave, mesos-health-ch]
+ 
+- list: misc_tools
+  items: [calico-node]
+ 
+- list: edr_tools
+  items: [/crowdstrike/cmd.sh, besclient, BESClient]
+
+- list: log_tools
+  items: [logdna, splunk, rsyslog]
+  
+- list: log_paths
+  items: [/var/, /tmp/nginx-ingress.private]
+  
+- list: known_setuid_binaries
+  items: [
+    sshd, dbus-daemon-lau, ping, ping6, critical-stack-, pmmcli,
+    filemng, PassengerAgent, bwrap, osdetect, nginxmng, sw-engine-fpm,
+    start-stop-daem
+    ]
+ 
+ - list: userexec_binaries
+  items: [sudo, su, suexec, critical-stack, dzdo]
+ 
+ - list: docker_binaries
+  items: [docker, dockerd, exe, docker-compose, docker-entrypoi, docker-runc-cur, docker-current, dockerd-current]
+ 
+ - list: nomachine_binaries
+  items: [nxexec, nxnode.bin, nxserver.bin, nxclient.bin]
+
+ - list: compilers
+  items: ["g++", gcc, clang, javac]
+
+- list: shadowutils_binaries
+  items: [
+    chage, gpasswd, lastlog, newgrp, sg, adduser, deluser, chpasswd,
+    groupadd, groupdel, addgroup, delgroup, groupmems, groupmod, grpck, grpconv, grpunconv,
+    newusers, pwck, pwconv, pwunconv, useradd, userdel, usermod, vigr, vipw, unix_chkpwd
+    ]
+
+- list: passwd_binaries
+  items: [
+    shadowconfig, grpck, pwunconv, grpconv, pwck,
+    groupmod, vipw, pwconv, useradd, newusers, cppw, chpasswd, usermod,
+    groupadd, groupdel, grpunconv, chgpasswd, userdel, chage, chsh,
+    gpasswd, chfn, expiry, passwd, vigr, cpgr, adduser, addgroup, deluser, delgroup
+    ]
+
+- list: user_mgmt_binaries
+  items: [login_binaries, passwd_binaries, shadowutils_binaries]
+
+- list: privileged_processes
+  items: [/usr/bin/sudo, /usr/local/sbin/runc]
+
+- list: auth_processes
+  items: [/opt/ibm/java/bin/keytool, /bin/chown, /bin/chmod, /bin/bash]
+
+### add lists
+- list: dev_creation_binaries
+  items: [blkid, rename_device, update_engine, sgdisk]
+
+- list: ssh_binaries
+  items: [
+    sshd, sftp-server, ssh-agent,
+    ssh, scp, sftp,
+    ssh-keygen, ssh-keysign, ssh-keyscan, ssh-add
+    ]
+
+- list: sysdigcloud_binaries
+  items: [setup-backend, dragent, sdchecks]
+
+- list: interpreted_binaries
+  items: [lua, node, perl, perl5, perl6, php, python, python2, python3, ruby, tcl]
+
+- list: openscap_rpm_binaries
+  items: [probe_rpminfo, probe_rpmverify, probe_rpmverifyfile, probe_rpmverifypackage]
+
+- list: hids_binaries
+  items: [aide, aide.wrapper, update-aide.con, logcheck, syslog-summary, osqueryd, ossec-syscheckd]
+
+- list: mail_config_binaries
+  items: [
+    update_conf, parse_mc, makemap_hash, newaliases, update_mk, update_tlsm4,
+    update_db, update_mc, ssmtp.postinst, mailq, postalias, postfix.config.,
+    postfix.config, postfix-script, postconf
+    ]
+
+- list: sensitive_directory_names
+  items: [/, /etc, /etc/, /root, /root/]
+
+- list: rfc_1918_addresses
+  items: ['"10.0.0.0/8"', '"172.16.0.0/12"', '"192.168.0.0/16"']
+
+- list: allowed_outbound_destination_ipaddrs
+  items: ['"127.0.0.1"', '"8.8.8.8"']
+
+- list: allowed_outbound_destination_networks
+  items: ['"127.0.0.1/8"']
+
+- list: allowed_outbound_destination_domains
+  items: [google.com, www.yahoo.com]
+
+- list: allowed_inbound_source_ipaddrs
+  items: ['"127.0.0.1"']
+
+- list: allowed_inbound_source_networks
+  items: ['"127.0.0.1/8"', '"10.0.0.0/8"']
+
+- list: allowed_inbound_source_domains
+  items: [google.com]
+
+- list: bash_config_filenames
+  items: [.bashrc, .bash_profile, .bash_history, .bash_login, .bash_logout, .inputrc, .profile]
+
+- list: bash_config_files
+  items: [/etc/profile, /etc/bashrc]
+
+- list: csh_config_filenames
+  items: [.cshrc, .login, .logout, .history, .tcshrc, .cshdirs]
+
+- list: csh_config_files
+  items: [/etc/csh.cshrc, /etc/csh.login]
+
+- list: zsh_config_filenames
+  items: [.zshenv, .zprofile, .zshrc, .zlogin, .zlogout]
+
+- list: shell_config_filenames
+  items: [bash_config_filenames, csh_config_filenames, zsh_config_filenames]
+
+- list: shell_config_files
+  items: [bash_config_files, csh_config_files]
+
+- list: shell_config_directories
+  items: [/etc/zsh]
+
+- list: needrestart_binaries
+  items: [needrestart, 10-dpkg, 20-rpm, 30-pacman]
+
+- list: sshkit_script_binaries
+  items: [10_etc_sudoers., 10_passwd_group]
+
+- list: plesk_binaries
+  items: [sw-engine, sw-engine-fpm, sw-engine-kv, filemng, f2bmng]
+
+- list: known_container_shell_spawn_cmdlines
+  items: []
+
+- list: known_shell_spawn_binaries
+  items: []
+
+- list: ms_oms_binaries
+  items: [omi.postinst, omsconfig.posti, scx.postinst, omsadmin.sh, omiagent]
+
+- list: veritas_binaries
+  items: [vxconfigd, sfcache, vxclustadm, vxdctl, vxprint, vxdmpadm, vxdisk, vxdg, vxassist, vxtune]
+
+- list: known_istio_files
+  items: [/healthready, /healthliveness]
+
+- list: repository_files
+  items: [sources.list]
+
+- list: repository_directories
+  items: [/etc/apt/sources.list.d, /etc/yum.repos.d, /etc/apt]
+
+- list: monitored_directories
+  items: [/boot, /lib, /lib64, /usr/lib, /usr/local/lib, /usr/local/sbin, /usr/local/bin, /root/.ssh, /etc/cardserver]
+
+- list: safe_etc_dirs
+  items: [/etc/cassandra, /etc/ssl/certs/java, /etc/logstash, /etc/nginx/conf.d, /etc/container_environment, /etc/hrmconfig, /etc/fluent/configs.d]
+
+- list: read_sensitive_file_images
+  items: []
+
+- list: user_known_change_thread_namespace_binaries
+  items: [crio, multus]
+
+- list: network_plugin_binaries
+  items: [aws-cni, azure-vnet]
+
+- list: trusted_images
+  items: []
+
+- list: sematext_images
+  items: [docker.io/sematext/sematext-agent-docker, docker.io/sematext/agent, docker.io/sematext/logagent,
+          registry.access.redhat.com/sematext/sematext-agent-docker,
+          registry.access.redhat.com/sematext/agent,
+          registry.access.redhat.com/sematext/logagent,
+          sematext/sematext-agent-docker, sematext/agent, sematext/logagent]
+
+- list: falco_privileged_images
+  items: [
+    docker.io/calico/node,
+    calico/node,
+    docker.io/cloudnativelabs/kube-router,
+    cloudnativelabs/kube-router,
+    docker.io/docker/ucp-agent,
+    docker.io/falcosecurity/falco,
+    docker.io/mesosphere/mesos-slave,
+    docker.io/rook/toolbox,
+    docker.io/sysdig/falco,
+    docker.io/sysdig/sysdig,
+    falcosecurity/falco,
+    gcr.io/google_containers/kube-proxy,
+    gcr.io/google-containers/startup-script,
+    gcr.io/projectcalico-org/node,
+    gke.gcr.io/kube-proxy,
+    gke.gcr.io/gke-metadata-server,
+    gke.gcr.io/netd-amd64,
+    gcr.io/google-containers/prometheus-to-sd,
+    k8s.gcr.io/ip-masq-agent-amd64,
+    k8s.gcr.io/kube-proxy,
+    k8s.gcr.io/prometheus-to-sd,
+    quay.io/calico/node,
+    sysdig/falco,
+    sysdig/sysdig,
+    sematext_images
+    ]
+
+- list: rancher_images
+  items: [
+    rancher/network-manager, rancher/dns, rancher/agent,
+    rancher/lb-service-haproxy, rancher/metadata, rancher/healthcheck
+  ]
+
+- list: falco_sensitive_mount_images
+  items: [
+    docker.io/sysdig/falco, docker.io/sysdig/sysdig, sysdig/falco, sysdig/sysdig,
+    docker.io/falcosecurity/falco, falcosecurity/falco,
+    gcr.io/google_containers/hyperkube,
+    gcr.io/google_containers/kube-proxy, docker.io/calico/node,
+    docker.io/rook/toolbox, docker.io/cloudnativelabs/kube-router, docker.io/consul,
+    docker.io/datadog/docker-dd-agent, docker.io/datadog/agent, docker.io/docker/ucp-agent, docker.io/gliderlabs/logspout,
+    docker.io/netdata/netdata, docker.io/google/cadvisor, docker.io/prom/node-exporter,
+    amazon/amazon-ecs-agent
+    ]
+
+- list: falco_hostnetwork_images
+  items: [
+    gcr.io/google-containers/prometheus-to-sd,
+    gcr.io/projectcalico-org/typha,
+    gcr.io/projectcalico-org/node,
+    gke.gcr.io/gke-metadata-server,
+    gke.gcr.io/kube-proxy,
+    gke.gcr.io/netd-amd64,
+    k8s.gcr.io/ip-masq-agent-amd64,
+    k8s.gcr.io/prometheus-to-sd,
+    ]
+
+- list: known_shell_spawn_cmdlines
+  items: [
+    '"sh -c uname -p 2> /dev/null"',
+    '"sh -c uname -s 2>&1"',
+    '"sh -c uname -r 2>&1"',
+    '"sh -c uname -v 2>&1"',
+    '"sh -c uname -a 2>&1"',
+    '"sh -c ruby -v 2>&1"',
+    '"sh -c getconf CLK_TCK"',
+    '"sh -c getconf PAGESIZE"',
+    '"sh -c LC_ALL=C LANG=C /sbin/ldconfig -p 2>/dev/null"',
+    '"sh -c LANG=C /sbin/ldconfig -p 2>/dev/null"',
+    '"sh -c /sbin/ldconfig -p 2>/dev/null"',
+    '"sh -c stty -a 2>/dev/null"',
+    '"sh -c stty -a < /dev/tty"',
+    '"sh -c stty -g < /dev/tty"',
+    '"sh -c node index.js"',
+    '"sh -c node index"',
+    '"sh -c node ./src/start.js"',
+    '"sh -c node app.js"',
+    '"sh -c node -e \"require(''nan'')\""',
+    '"sh -c node -e \"require(''nan'')\")"',
+    '"sh -c node $NODE_DEBUG_OPTION index.js "',
+    '"sh -c crontab -l 2"',
+    '"sh -c lsb_release -a"',
+    '"sh -c lsb_release -is 2>/dev/null"',
+    '"sh -c whoami"',
+    '"sh -c node_modules/.bin/bower-installer"',
+    '"sh -c /bin/hostname -f 2> /dev/null"',
+    '"sh -c locale -a"',
+    '"sh -c  -t -i"',
+    '"sh -c openssl version"',
+    '"bash -c id -Gn kafadmin"',
+    '"sh -c /bin/sh -c ''date +%%s''"'
+    ]
+
+- list: user_known_shell_spawn_binaries
+  items: []
+
+- list: known_system_procs_network_activity_binaries
+  items: [systemd, hostid, id]
+
+- list: http_proxy_binaries
+  items: [curl, wget]
+
+- list: openvpn_udp_ports
+  items: [1194, 1197, 1198, 8080, 9201]
+
+- list: l2tp_udp_ports
+  items: [500, 1701, 4500, 10000]
+
+- list: statsd_ports
+  items: [8125]
+
+- list: ntp_ports
+  items: [123]
+
+- list: test_connect_ports
+  items: [0, 9, 80, 3306]
+
+- list: expected_udp_ports
+  items: [53, openvpn_udp_ports, l2tp_udp_ports, statsd_ports, ntp_ports, test_connect_ports]
+
+- list: network_tool_binaries
+  items: [nc, ncat, nmap, dig, tcpdump, tshark, ngrep, telnet, mitmproxy, socat, zmap]
+
+- list: grep_binaries
+  items: [grep, egrep, fgrep]
+
+- list: log_directories
+  items: [/var/log, /dev/log]
+
+- list: log_files
+  items: [syslog, auth.log, secure, kern.log, cron, user.log, dpkg.log, last.log, yum.log, access_log, mysql.log, mysqld.log]
+
+- list: data_remove_commands
+  items: [shred, mkfs, mke2fs]
+
+- list: user_known_chmod_applications
+  items: [hyperkube, kubelet]
+
+- list: exclude_hidden_directories
+  items: [/root/.cassandra]
+
+- list: remote_file_copy_binaries
+  items: [rsync, scp, sftp, dcp]
+
+- list: miner_ports
+  items: [
+        25, 3333, 3334, 3335, 3336, 3357, 4444,
+        5555, 5556, 5588, 5730, 6099, 6666, 7777,
+        7778, 8000, 8001, 8008, 8080, 8118, 8333,
+        8888, 8899, 9332, 9999, 14433, 14444,
+        45560, 45700
+    ]
+
+- list: miner_domains
+  items: [
+      "asia1.ethpool.org","ca.minexmr.com",
+      "cn.stratum.slushpool.com","de.minexmr.com",
+      "eth-ar.dwarfpool.com","eth-asia.dwarfpool.com",
+      "eth-asia1.nanopool.org","eth-au.dwarfpool.com",
+      "eth-au1.nanopool.org","eth-br.dwarfpool.com",
+      "eth-cn.dwarfpool.com","eth-cn2.dwarfpool.com",
+      "eth-eu.dwarfpool.com","eth-eu1.nanopool.org",
+      "eth-eu2.nanopool.org","eth-hk.dwarfpool.com",
+      "eth-jp1.nanopool.org","eth-ru.dwarfpool.com",
+      "eth-ru2.dwarfpool.com","eth-sg.dwarfpool.com",
+      "eth-us-east1.nanopool.org","eth-us-west1.nanopool.org",
+      "eth-us.dwarfpool.com","eth-us2.dwarfpool.com",
+      "eu.stratum.slushpool.com","eu1.ethermine.org",
+      "eu1.ethpool.org","fr.minexmr.com",
+      "mine.moneropool.com","mine.xmrpool.net",
+      "pool.minexmr.com","pool.monero.hashvault.pro",
+      "pool.supportxmr.com","sg.minexmr.com",
+      "sg.stratum.slushpool.com","stratum-eth.antpool.com",
+      "stratum-ltc.antpool.com","stratum-zec.antpool.com",
+      "stratum.antpool.com","us-east.stratum.slushpool.com",
+      "us1.ethermine.org","us1.ethpool.org",
+      "us2.ethermine.org","us2.ethpool.org",
+      "xmr-asia1.nanopool.org","xmr-au1.nanopool.org",
+      "xmr-eu1.nanopool.org","xmr-eu2.nanopool.org",
+      "xmr-jp1.nanopool.org","xmr-us-east1.nanopool.org",
+      "xmr-us-west1.nanopool.org","xmr.crypto-pool.fr",
+      "xmr.pool.minergate.com"
+      ]
+
+- list: https_miner_domains
+  items: [
+    "ca.minexmr.com",
+    "cn.stratum.slushpool.com",
+    "de.minexmr.com",
+    "fr.minexmr.com",
+    "mine.moneropool.com",
+    "mine.xmrpool.net",
+    "pool.minexmr.com",
+    "sg.minexmr.com",
+    "stratum-eth.antpool.com",
+    "stratum-ltc.antpool.com",
+    "stratum-zec.antpool.com",
+    "stratum.antpool.com",
+    "xmr.crypto-pool.fr"
+  ]
+
+- list: http_miner_domains
+  items: [
+    "ca.minexmr.com",
+    "de.minexmr.com",
+    "fr.minexmr.com",
+    "mine.moneropool.com",
+    "mine.xmrpool.net",
+    "pool.minexmr.com",
+    "sg.minexmr.com",
+    "xmr.crypto-pool.fr"
+  ]
+
+- list: k8s_client_binaries
+  items: [docker, kubectl, crictl]
+
+- list: user_known_k8s_ns_kube_system_images
+  items: [
+      k8s.gcr.io/fluentd-gcp-scaler,
+      k8s.gcr.io/node-problem-detector/node-problem-detector
+  ]
+
+- list: user_known_k8s_images
+  items: [
+      mcr.microsoft.com/aks/hcp/hcp-tunnel-front
+  ]
+
+- list: user_known_packet_socket_binaries
+  items: []
+
+- list: images_allow_network_outside_subnet
+  items: []
+
+- list: namespace_scope_network_only_subnet
+  items: []
+
+- list: allowed_image
+  items: [] # add image to monitor, i.e.: bitnami/nginx
+
+- list: authorized_server_binaries
+  items: []  # add binary to allow, i.e.: nginx
+
+- list: authorized_server_port
+  items: [] # add port to allow, i.e.: 80
+
+- list: c2_server_ip_list
+  items: []
+
+- list: white_listed_modules
+  items: []

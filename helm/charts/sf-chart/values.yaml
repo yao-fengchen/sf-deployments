@@ -88,11 +88,11 @@ sfcollector:
   # Pull policy for image (Always|Never|IfNotPresent)
   imagepullpolicy: Always
   # Image repository
-  repository: sysflowtelemetry/sf-collector
+  repository: yaofengchen/sf-collector
   # Image tag
-  tag: latest
+  tag: 1.1
   # Filter expression
-  filter: "container.type!=host and container.name!=sfprocessor and container.name!=sfcollector"
+  filter: "container.name!=sfprocessor and container.name!=sfcollector"
   # Use this criPath if running docker runtime
   criPath: ""
   # Use this criPath if running containerd runtime
@@ -129,13 +129,13 @@ sfprocessor:
   # Comment out if you always want to pull images
   imagepullpolicy: Always
   # Image repository
-  repository: sysflowtelemetry/sf-processor
+  repository: yaofengchen/sf-processor
   # Image tag
-  tag: latest
+  tag: 1.1
   #Override processor exporter in pipeline.json
   override: true
   # Export type (terminal|file|syslog)
-  export: syslog
+  export: terminal
   # rsyslog host address
   syslogHost: localhost
   # rsyslog port
@@ -194,7 +194,8 @@ sfexporter:
   # object store connection, 'true' if TLS-enabled, 'false' otherwise. Only used with "s3"
   s3Secure: "true"
 
-nodeSelector: {}
+nodeSelector: #{}
+  host: "yaofc_minikube"
 
 tolerations: []
 

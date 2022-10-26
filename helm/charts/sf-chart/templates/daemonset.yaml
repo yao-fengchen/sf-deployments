@@ -128,9 +128,12 @@ spec:
       - name: sfcollector
         image: {{ .Values.sfcollector.repository }}:{{ .Values.sfcollector.tag }}
         imagePullPolicy: {{ .Values.sfcollector.imagepullpolicy | default "" | quote }}
+        command: ["/bin/bash","-ce","tail -f /dev/null"]
         resources:
           {{- toYaml .Values.collectorresources | nindent 10 }}
         env:
+        - name: SKIP_DRIVER_LOADER
+          value: "TRUE"
         {{- if .Values.sfexporter.enabled }}
         - name: OUTPUT
           value: {{ .Values.sfcollector.outDir | quote }}
