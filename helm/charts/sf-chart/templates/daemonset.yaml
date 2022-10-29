@@ -128,7 +128,7 @@ spec:
       - name: sfcollector
         image: {{ .Values.sfcollector.repository }}:{{ .Values.sfcollector.tag }}
         imagePullPolicy: {{ .Values.sfcollector.imagepullpolicy | default "" | quote }}
-        command: ["/bin/bash","-ce","tail -f /dev/null"]
+        # command: ["/bin/bash","-ce","tail -f /dev/null"]
         resources:
           {{- toYaml .Values.collectorresources | nindent 10 }}
         env:
